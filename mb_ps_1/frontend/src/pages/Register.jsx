@@ -1,4 +1,3 @@
-// File: src/pages/Register.jsx
 import { useState, useEffect } from "react";
 import "./Register.css";
 
@@ -20,64 +19,66 @@ export default function Register() {
   }, []);
 
   return (
-    <div className="container">
-      <div className="left">
-        <img
-          src={images[currentImage]}
-          alt="slide"
-          className="background-img"
-        />
-        <div className="overlay">
-          <div className="logo">AMU</div>
-          <button className="back-btn">Back to website →</button>
-          <div className="tagline">Capturing Moments, Creating Memories</div>
-          <div className="dots">
-            {images.map((_, idx) => (
-              <div
-                key={idx}
-                className={`dot ${idx === currentImage ? "active" : ""}`}
-              ></div>
-            ))}
+    <div className="login-content">
+      <div className="container">
+        <div className="left">
+          <img
+            src={images[currentImage]}
+            alt="slide"
+            className="background-img"
+          />
+          <div className="overlay">
+            {/* <div className="logo">AMU</div> */}
+            <button className="back-btn">Back to website →</button>
+            <div className="tagline">Capturing Moments, Creating Memories</div>
+            <div className="dots">
+              {images.map((_, idx) => (
+                <div
+                  key={idx}
+                  className={`dot ${idx === currentImage ? "active" : ""}`}
+                ></div>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className="right">
-        <h1>{showLogin ? "Login to your account" : "Create an account"}</h1>
-        <p>
-          {showLogin ? "Don't have an account?" : "Already have an account?"}{" "}
-          <span className="toggle" onClick={() => setShowLogin(!showLogin)}>
-            {showLogin ? "Sign up" : "Log in"}
-          </span>
-        </p>
+        <div className="right">
+          <h1>{showLogin ? "Login to your account" : "Create an account"}</h1>
+          <p>
+            {showLogin ? "Don't have an account?" : "Already have an account?"}{" "}
+            <span className="toggle" onClick={() => setShowLogin(!showLogin)}>
+              {showLogin ? "Sign up" : "Log in"}
+            </span>
+          </p>
 
-        <form className="form">
-          {!showLogin && (
-            <div className="row">
-              <input type="text" placeholder="First name" />
-              <input type="text" placeholder="Last name" />
+          <form className="form">
+            {!showLogin && (
+              <div className="row">
+                <input type="text" placeholder="First name" />
+                <input type="text" placeholder="Last name" />
+              </div>
+            )}
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Enter your password" />
+
+            {!showLogin && (
+              <label className="terms">
+                <input type="checkbox" defaultChecked /> I agree to the{" "}
+                <a href="#">Terms & Conditions</a>
+              </label>
+            )}
+
+            <button type="submit" className="submit-btn">
+              {showLogin ? "Login" : "Create account"}
+            </button>
+
+            <div className="divider">Or register with</div>
+            <div className="social-buttons">
+              <button className="google">Google</button>
+              <button className="apple">FaceBook</button>
             </div>
-          )}
-          <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Enter your password" />
-
-          {!showLogin && (
-            <label className="terms">
-              <input type="checkbox" defaultChecked /> I agree to the{" "}
-              <a href="#">Terms & Conditions</a>
-            </label>
-          )}
-
-          <button type="submit" className="submit-btn">
-            {showLogin ? "Login" : "Create account"}
-          </button>
-
-          <div className="divider">Or register with</div>
-          <div className="social-buttons">
-            <button className="google">Google</button>
-            <button className="apple">Apple</button>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </div>
   );
