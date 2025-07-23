@@ -1,0 +1,182 @@
+.login-content{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #1d1a28;
+}
+
+
+.container {
+    display: flex;
+    height: 100vh;
+    width: 80%;
+    font-family: 'Segoe UI', sans-serif;
+    background: #1d1a28;
+    padding: 2vw;
+  }
+  
+  .left {
+    position: relative;
+    width: 50%;
+    overflow: hidden;
+  }
+  
+  .background-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;  
+  }
+  
+  .overlay {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .back-btn {
+    background: rgba(255, 255, 255, 0.45);
+    border: none;
+    border-radius: 1rem;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    align-self: flex-end;
+    cursor: pointer;
+  }
+  
+  .tagline {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #1d1a28;
+    margin-bottom: 2rem;
+  }
+  
+  .dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.4rem;
+  }
+  
+  .dot {
+    width: 30px;
+    height: 5px;
+    border-radius: 3em;
+    background: rgba(255, 255, 255, 0.4);
+  }
+  
+  .dot.active {
+    background: #fff;
+  }
+  
+  .right {
+    background: #2b223c;
+    width: 50%;
+    color: #fff;
+    padding: 5rem 3rem;
+  }
+  
+  .right h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .right p {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+  
+  .toggle {
+    color: #a78bfa;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .row {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  input[type='text'],
+  input[type='email'],
+  input[type='password'] {
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: none;
+    width: 100%;
+    background: #3c3050;
+    color: #fff;
+  }
+  
+  .terms {
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .terms input {
+    accent-color: #a78bfa;
+  }
+  
+  .terms a {
+    color: #a78bfa;
+  }
+  
+  .submit-btn {
+    background: #a78bfa;
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .divider {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+  
+  .social-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .social-buttons button {
+    flex: 1;
+    padding: 0.7rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .google {
+    background: #fff;
+    color: #000;
+  }
+  
+  .apple {
+    background: #000;
+    color: #fff;
+  }
+  
